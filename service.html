@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Our Services</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #ece7d9;
+      color: #565452;
+    }
+
+    h2 {
+      text-align: center;
+      color: #ef673c;
+      margin: 40px 0 20px;
+      font-size: 2.8rem;
+    }
+
+    .service-container {
+      max-width: 1100px;
+      margin: 40px auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 20px;
+      opacity: 0;
+      transform: translateX(100px);
+      transition: all 0.8s ease;
+      padding: 20px;
+      background-color: #fff;
+      border-radius: 16px;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    .service-container.left {
+      flex-direction: row;
+    }
+
+    .service-container.right {
+      flex-direction: row-reverse;
+      transform: translateX(-100px);
+    }
+
+    .service-container.visible {
+      opacity: 1;
+      transform: translateX(0);
+    }
+
+    .service-image,
+    .service-content {
+      flex: 1 1 40%;
+    }
+
+    .service-image img {
+      width: 100%;
+      border-radius: 12px;
+      height: auto;
+      display: block;
+    }
+
+    .service-content h3 {
+      color: #ef673c;
+      font-size: 2rem;
+      margin-bottom: 10px;
+    }
+
+    .service-content p {
+      font-size: 1.1rem;
+      line-height: 1.6;
+    }
+
+    details summary {
+      cursor: pointer;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    details p {
+      margin: 0 0 15px 0;
+      padding-left: 10px;
+      color: #333;
+    }
+     .faq-container {
+      max-width: 1100px;
+      margin: 40px auto;
+      background-color: #fff;
+      padding: 30px;
+      border-radius: 16px;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    .faq-container details {
+      background-color: #f9f6ee;
+      border-radius: 10px;
+      padding: 15px 20px;
+      margin-bottom: 15px;
+      border: 1px solid #ddd;
+    }
+
+    .faq-container summary {
+      cursor: pointer;
+      font-weight: 600;
+      font-size: 1.1rem;
+      color: #ef673c;
+    }
+
+    .faq-container details p {
+      margin-top: 10px;
+      font-size: 1rem;
+      color: #565452;
+    }
+
+    @media (max-width: 768px) {
+      .service-container {
+        flex-direction: column !important;
+        text-align: center;
+      }
+
+      .service-image,
+      .service-content {
+        flex: 1 1 100%;
+      }
+
+      form input,
+      form textarea {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <h2>Our Services</h2>
+
+  <!-- Static Website -->
+  <div class="service-container left">
+    <div class="service-image">
+      <img src="./static.gif" alt="Static Website" />
+    </div>
+    <div class="service-content">
+      <h3>Static Website</h3>
+      <p>We create sleek, fast, and affordable static websites. Ideal for small businesses, personal portfolios, or one-page sites — with no backend required.</p>
+    </div>
+  </div>
+
+  <!-- Dynamic Website -->
+  <div class="service-container right">
+    <div class="service-image">
+      <img src="./website.gif" alt="Dynamic Website" />
+    </div>
+    <div class="service-content">
+      <h3>Dynamic Website</h3>
+      <p>Get powerful, database-driven websites with user interactivity, admin dashboards, login systems, and more. Built for scalability and growth. Get started with our services and get instant updates.</p>
+    </div>
+  </div>
+
+  <!-- Internships -->
+  <div class="service-container left">
+    <div class="service-image">
+      <img src="./oneimage.gif" alt="Internships" />
+    </div>
+    <div class="service-content">
+      <h3>Internships</h3>
+      <p>Real-world internships for students and freshers in web development and digital skills. Work on projects, learn with mentors, and boost your resume.</p>
+    </div>
+  </div>
+
+  <!-- Courses for Students -->
+  <div class="service-container right">
+    <div class="service-image">
+      <img src="./web-development.gif" alt="Courses for Students" />
+    </div>
+    <div class="service-content">
+      <h3>Courses for School Students</h3>
+      <p>Fun, engaging tech courses in programming, robotics, and creative design for school students. Learn by doing and spark a lifelong love for tech!</p>
+    </div>
+  </div>
+
+  <!-- Our Projects -->
+  <h2>Our Projects</h2>
+  <div class="service-container left">
+    <div class="service-image">
+      <img src="./project1.png" alt="Our Projects" />
+    </div>
+    <div class="service-content">
+      <h3>Innovative Web Solutions</h3>
+      <p>From custom CMS to e-commerce platforms and education portals, our portfolio showcases a wide range of web applications developed with modern technologies tailored to client needs.</p>
+    </div>
+  </div>
+    <div class="service-container left">
+    <div class="service-image">
+      <img src="./project2.png" alt="Our Projects" />
+    </div>
+    <div class="service-content">
+      <h3>Innovative Web Solutions</h3>
+      <p>From custom CMS to e-commerce platforms and education portals, our portfolio showcases a wide range of web applications developed with modern technologies tailored to client needs.</p>
+    </div>
+  </div>
+
+  <!-- FAQ Section -->
+ <h2>Frequently Asked Questions</h2>
+  <div class="faq-container">
+    <details>
+      <summary>What technologies do you use?</summary>
+      <p>We work with HTML, CSS, JavaScript, React, Node.js, MongoDB, Python, and more based on the project requirements.</p>
+    </details>
+    <details>
+      <summary>Do you provide certificates for internships?</summary>
+      <p>Yes, we provide official certificates upon successful completion of internship projects and assessments.</p>
+    </details>
+    <details>
+      <summary>Can I enroll in a course without prior experience?</summary>
+      <p>Absolutely! Our beginner courses are designed for those starting from scratch.</p>
+    </details>
+    <details>
+      <summary>How long does it take to build a website?</summary>
+      <p>Depending on complexity, a website can take anywhere from a few days to several weeks. We provide clear timelines after discussing your project.</p>
+    </details>
+    <details>
+      <summary>Can I customize my website after it's built?</summary>
+      <p>Yes, we offer maintenance and customization support even after the project is delivered.</p>
+    </details>
+  </div>
+
+  <script>
+    const serviceContainers = document.querySelectorAll('.service-container');
+
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, {
+      threshold: 0.2
+    });
+
+    serviceContainers.forEach(container => observer.observe(container));
+  </script>
+</body>
+</html>
+

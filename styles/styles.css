@@ -1,0 +1,268 @@
+body {
+    font-family: Arial, sans-serif;
+    margin-top: 80px; /* Space for fixed navbar */
+    background-color: black;
+    color: white;
+}
+
+/* Fixed Navbar */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    background: black;
+    background-size: 400% 400%;
+}
+
+.name {
+    margin-left: -15px;
+    font-family: Georgia, serif;
+    font-size: 2rem; /* Adjust as needed */
+    font-weight: bold; /* Adjust as needed */
+    background: linear-gradient(to right, red, yellow, green);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+     display: inline-block;
+}
+
+.navbar-brand {
+    display: flex;
+    align-items: center;
+}
+
+.navbar-brand img {
+    height: 40px;
+    margin-right: 10px;
+    border-radius: 10px;
+    margin-bottom: 3px;
+}
+
+.ms-auto a {
+    margin-left: 10px;
+}
+
+.btn-custom {
+    background-color: red;
+    color: black;
+    border: 1px solid red; /* Ensures the border matches the initial background */
+}
+
+.btn-custom:hover {
+    background-color: white;
+    color: black;
+    border: 1px solid green; /* Keeps a consistent border on hover */
+}
+
+/* About Section */
+.about-section {
+    padding: 80px 0 50px 0;
+    margin-top: -20px;
+    background-image: url('../images/about.jpg');
+    background-size: cover;
+    background-position: center;
+    color: white;
+}
+
+/* Image Section */
+.banner {
+    position: relative;
+    height: 400px;
+    overflow: hidden;
+    border: 5px solid yellow;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.banner img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease-in-out;
+}
+
+.banner:hover img {
+    transform: scale(1.1);
+}
+
+.banner-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    font-size: 2rem;
+    font-weight: bold;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.banner:hover .banner-overlay {
+    opacity: 1;
+}
+
+/* Digital Training Section */
+.digital-training-section {
+    padding: 80px 0;
+    padding-top: 20px;
+    color: #f1f1f1;
+}
+
+.digital-training-section .row img {
+    width: 100%;
+    height: 80%;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.digital-training-section .row img:hover {
+    transform: scale(1.05);
+}
+
+.digital-training-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.digital-training-section p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+/* Courses Section */
+.courses {
+    padding: 80px 0 20px 0;
+    margin-top: -300px;
+    background-size: cover;
+    background-position: center;
+}
+
+.section-heading {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 40px;
+    margin-top: 50px;
+    padding-top: 20px;
+}
+
+.course-item,
+.offer-item {
+    background: green;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s, background 0.3s;
+}
+
+.course-item img,
+.offer-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.offer-badge {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: red;
+    color: white;
+    padding: 5px 10px;
+    font-size: 14px;
+    font-weight: bold;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.offer-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    background: rgba(255, 255, 255, 0.9);
+}
+
+.offer-item:hover img {
+    transform: scale(1.1);
+}
+
+.offer-badge {
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        box-shadow: 0 0 10px rgba(255, 0, 0, 0.5);
+    }
+    50% {
+        transform: scale(1.1);
+        box-shadow: 0 0 20px rgba(255, 0, 0, 0.7);
+    }
+    100% {
+        transform: scale(1);
+        box-shadow: 0 0 10px rgba(255, 0, 0, 0.5);
+    }
+}
+
+/* Trainers Section */
+.trainers-section {
+    padding: 80px 0;
+    color: white;
+    margin-top: -100px;
+}
+
+.trainers-section .trainer-item {
+    background: rgba(158, 41, 41, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.trainer-item img {
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    margin-right: 20px;
+}
+
+.trainer-item .trainer-info {
+    flex-grow: 1;
+}
+
+.trainer-item h4 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.trainer-item p {
+    font-size: 1rem;
+}
+
+footer {
+    background-color: #f8f9fa;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.navbar a {
+    color: #fff;
+}
+
+.foot {
+    background-color: black;
+}
